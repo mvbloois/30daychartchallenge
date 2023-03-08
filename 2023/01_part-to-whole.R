@@ -17,5 +17,5 @@ df %>%
   labs(title = "part-to-whole") +
   theme_void()
 
-ggsave("./2023/part-to-whole.png")
+ggsave("./2023/01_part-to-whole.png")
 
