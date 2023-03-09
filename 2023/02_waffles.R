@@ -18,7 +18,7 @@ ggplot(ingredients, aes(fill = ingredient, values = grams)) +
   theme_void() +
   labs(
     title = "Sirup waffles from Gouda",
-    subtitle = "ingredients to make sirup waffles, add salt and cinnamon powder",
+    subtitle = "ingredients to make sirup waffles, add pinches of salt and cinnamon powder",
     caption = "Ingredients: 24Kitchen",
     fill = "Ingredients"
   ) +
