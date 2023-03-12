@@ -54,9 +54,9 @@ egg_dimensions <-
     bird    = c("Quail", "Duck", "Goose"),
     diameter  = c(27, 44, 55),
     length = c(35, 65, 90),
-    image = c("./resources/quail.png",
-              "./resources/duck.png",
-              "./resources/goose.png")
+    image = c("./2023/images/quail.png",
+              "./2023/images/duck.png",
+              "./2023/images/goose.png")
   ) 
 
 egg_dimensions %>% 
