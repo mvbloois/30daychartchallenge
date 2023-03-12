@@ -187,7 +187,7 @@ mutate(price = pound * 240 + shilling * 12 + pence)
 df %>% 
 ggplot(aes(x = year, y = price)) +
   geom_col_pattern() +
-  scale_y_continuous(breaks = c(240, 480, 720, 960),
+  scale_y_continuous(breaks = 1:4*240,
                      labels = c("£1", "£2", "£3", "£4")) +
   labs(title = str_wrap("PRICES OF THE QUARTER OF NINE BUSHELS OF THE BEST OR HIGHEST PRICED WHEAT AT WINDSOR MARKET, ON LADY-DAY AND MICHAELMAS, FROM 1595 TO 1764, BOTH INCLUSIVE; THE PRICE OF EACH YEAR BEING THE MEDIUM BETWEEN THE HIGHEST PRICES OF THOSE TWO MARKET-DAYS.", 60),
        caption = "Data: Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations (1776)",
