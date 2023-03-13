@@ -27,7 +27,7 @@ theme_update(
                             face = "bold",
                             colour = txt,
                             margin = margin(t = 5, b = 5),
-                            size = 72,
+                            size = 62,
                             hjust = 0.5),
   plot.subtitle = element_text(family = "font",
                                size = 55,
@@ -47,12 +47,12 @@ theme_update(
 
 df %>% 
 ggplot(aes(x = year, y = price)) +
-  geom_col_pattern() +
+  geom_col_pattern(pattern_spacing = 0.01) +
   scale_y_continuous(breaks = 1:4*240,
                      labels = c("£1", "£2", "£3", "£4")) +
   labs(title = str_wrap("PRICES OF THE QUARTER OF NINE BUSHELS OF THE BEST OR HIGHEST PRICED WHEAT AT WINDSOR MARKET, ON LADY-DAY AND MICHAELMAS, FROM 1595 TO 1764, BOTH INCLUSIVE; THE PRICE OF EACH YEAR BEING THE MEDIUM BETWEEN THE HIGHEST PRICES OF THOSE TWO MARKET-DAYS.", 60),
-       caption = "Data: Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations (1776)<br>
-       Correspondence: Mr. M. van Bloois",
+       caption = "Data: Smith, Adam (1776), An Inquiry into the Nature and Causes of the Wealth of Nations<br>
+       Correspondence: Mr. M. van Bloois, Gouda, HOL-LAND",
        x = NULL,
        y = NULL) 
 ## Saving ----
