@@ -9,180 +9,41 @@ showtext_auto()
 txt <- "grey25"
 bg <- "#E0D3AF"
   
-df <- tribble(
-  ~year, ~pound, ~shilling, ~pence,
-1595,	2,	0,	0
-,1596,	2,	8,	0
-,1597,	3,	9,	6
-,1598,	2,	16,	8
-,1599,	1,	19,	2
-,1600,	1,	17,	8
-,1601,	1,	14,	10
-,1602,	1,	9,	4
-,1603,	1,	15,	4
-,1604,	1,	10,	8
-,1605,	1,	15,	10
-,1606,	1,	13,	0
-,1607,	1,	16,	8
-,1608,	2,	16,	8
-,1609,	2,	10,	0
-,1610,	1,	15,	10
-,1611,	1,	18,	8
-,1612,	2,	2,	4
-,1613,	2,	8,	8
-,1614,	2,	1,	8
-,1615,	1,	18,	8
-,1616,	2,	0,	4
-,1617,	2,	8,	8
-,1618,	2,	6,	8
-,1619,	1,	15,	4
-,1620,	1,	10,	4
-,1621,	1,	10,	4
-,1622,	2,	18,	8
-,1623,	2,	12,	0
-,1624,	2,	8,	0
-,1625,	2,	12,	0
-,1626,	2,	9,	4
-,1627,	1,	16,	0
-,1628,	1,	8,	0
-,1629,	2,	2,	0
-,1630,	2,	15,	8
-,1631,	3,	8,	0
-,1632,	2,	13,	4
-,1633,	2,	18,	0
-,1634,	2,	16,	0
-,1635,	2,	16,	0
-,1636,	2,	16,	8
-,1637,	2,	13,	0
-,1638,	2,	17,	4
-,1639,	2,	4,	10
-,1640,	2,	4,	8
-,1641,	2,	8,	0
-,1642,	0,	0,	0
-,1643,	0,	0,	0
-,1644,	0,	0,	0
-,1645,	0,	0,	0
-,1646,	2,	8,	0
-,1647,	3,	13,	0
-,1648,	4,	5,	0
-,1649,	4,	0,	0
-,1650,	3,	16,	8
-,1651,	3,	13,	4
-,1652,	2,	9,	6
-,1653,	1,	15,	6
-,1654,	1,	6,	0
-,1655,	1,	13,	4
-,1656,	2,	3,	0
-,1657,	2,	6,	8
-,1658,	3,	5,	0
-,1659,	3,	6,	0
-,1660,	2,	16,	6
-,1661,	3,	10,	0
-,1662,	3,	14,	0
-,1663,	2,	17,	0
-,1664,	2,	0,	6
-,1665,	2,	9,	4
-,1666,	1,	16,	0
-,1667,	1,	16,	0
-,1668,	2,	0,	0
-,1669,	2,	4,	4
-,1670,	2,	1,	8
-,1671,	2,	2,	0
-,1672,	2,	1,	0
-,1673,	2,	6,	8
-,1674,	3,	8,	8
-,1675,	3,	4,	8
-,1676,	1,	18,	0
-,1677,	2,	2,	0
-,1678,	2,	19,	0
-,1679,	3,	0,	0
-,1680,	2,	5,	0
-,1681,	2,	6,	8
-,1682,	2,	4,	0
-,1683,	2,	0,	0
-,1684,	2,	4,	0
-,1685,	2,	6,	8
-,1686,	1,	14,	0
-,1687,	1,	5,	2
-,1688,	2,	6,	0
-,1689,	1,	10,	0
-,1690,	1,	14,	8
-,1691,	1,	14,	0
-,1692,	2,	6,	8
-,1693,	3,	7,	8
-,1694,	3,	4,	0
-,1695,	2,	13,	0
-,1696,	3,	11,	0
-,1697,	3,	0,	0
-,1698,	3,	8,	4
-,1699,	3,	4,	0
-,1700,	2,	0,	0
-,1701,	1,	17,	8
-,1702,	1,	9,	6
-,1703,	1,	16,	0
-,1704,	2,	6,	6
-,1705,	1,	10,	0
-,1706,	1,	6,	0
-,1707,	1,	8,	6
-,1708,	2,	1,	6
-,1709,	3,	18,	6
-,1710,	3,	18,	0
-,1711,	2,	14,	0
-,1712,	2,	6,	4
-,1713,	2,	11,	0
-,1714,	2,	10,	4
-,1715,	2,	3,	0
-,1716,	2,	8,	0
-,1717,	2,	5,	8
-,1718,	1,	18,	10
-,1719,	1,	15,	0
-,1720,	1,	17,	0
-,1721,	1,	17,	6
-,1722,	1,	16,	0
-,1723,	1,	14,	8
-,1724,	1,	17,	0
-,1725,	2,	8,	6
-,1726,	2,	6,	0
-,1727,	2,	2,	0
-,1728,	2,	14,	6
-,1729,	2,	6,	10
-,1730,	1,	16,	6
-,1731,	1,	12,	10
-,1732,	1,	6,	8
-,1733,	1,	8,	4
-,1734,	1,	18,	10
-,1735,	2,	3,	0
-,1736,	2,	0,	4
-,1737,	1,	18,	0
-,1738,	1,	15,	6
-,1739,	1,	18,	6
-,1740,	2,	10,	8
-,1741,	2,	6,	8
-,1742,	1,	14,	0
-,1743,	1,	4,	10
-,1744,	1,	4,	10
-,1745,	1,	7,	6
-,1746,	1,	19,	0
-,1747,	1,	14,	10
-,1748,	1,	17,	0
-,1749,	1,	17,	0
-,1750,	1,	12,	6
-,1751,	1,	18,	6
-,1752,	2,	1,	10
-,1753,	2,	4,	8
-,1754,	1,	14,	8
-,1755,	1,	13,	10
-,1756,	2,	5,	3
-,1757,	3,	0,	0
-,1758,	2,	10,	0
-,1759,	1,	19,	10
-,1760,	1,	16,	6
-,1761,	1,	10,	3
-,1762,	1,	19,	0
-,1763,	2,	0,	9
-,1764,	2,	6,	9
-) %>% 
-mutate(price = pound * 240 + shilling * 12 + pence)
+df <- read_csv2("./2023/data/historical.csv") %>% 
+  mutate(price = pound * 240 + shilling * 12 + pence)
+
+## Theme ----
+theme_set(theme_minimal())
+
+theme_update(
+  text = element_text(family = "font",
+                      size = 62, lineheight = 0.3),
+  panel.grid = element_line(colour = "grey80"),
+  plot.background = element_rect(fill = bg,
+                                 colour = bg),
+  plot.title.position = "plot",
+  plot.caption.position = "plot",
+  plot.title = element_text(family = "font",
+                            face = "bold",
+                            colour = txt,
+                            margin = margin(t = 5, b = 5),
+                            size = 72,
+                            hjust = 0.5),
+  plot.subtitle = element_text(family = "font",
+                               size = 55,
+                               hjust = 0.5,
+                               margin = margin(t = 5, b = 5)
+  ),
+  plot.caption = element_markdown(family = "font",
+                                  size = 32,
+                                  colour = txt,
+                                  hjust = 1,
+                                  margin = margin(t = 15)),
+  plot.margin = margin(b = 20, t = 20, r = 20, l = 20),
+  legend.position = "none",
+  panel.grid.major.x = element_blank(),
+  panel.grid.minor.x = element_blank()
+)
 
 df %>% 
 ggplot(aes(x = year, y = price)) +
@@ -190,17 +51,14 @@ ggplot(aes(x = year, y = price)) +
   scale_y_continuous(breaks = 1:4*240,
                      labels = c("£1", "£2", "£3", "£4")) +
   labs(title = str_wrap("PRICES OF THE QUARTER OF NINE BUSHELS OF THE BEST OR HIGHEST PRICED WHEAT AT WINDSOR MARKET, ON LADY-DAY AND MICHAELMAS, FROM 1595 TO 1764, BOTH INCLUSIVE; THE PRICE OF EACH YEAR BEING THE MEDIUM BETWEEN THE HIGHEST PRICES OF THOSE TWO MARKET-DAYS.", 60),
-       caption = "Data: Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations (1776)",
+       caption = "Data: Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations (1776)<br>
+       Correspondence: Mr. M. van Bloois",
        x = NULL,
-       y = NULL) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "font"),
-    panel.grid = element_line(colour = "grey80"),
-    panel.grid.major.x = element_blank(),
-    panel.grid.minor.x = element_blank(),
-    plot.title.position = "plot",
-    plot.title = element_text(hjust = 0.5),
-    plot.background = element_rect(fill = bg,
-                                   colour = bg)
-  )
+       y = NULL) 
+## Saving ----
+ggsave("./2023/04_historical.png",
+       bg = bg,
+       height = 9, width = 12)
+
+system("open ./2023/04_historical.png")
+
