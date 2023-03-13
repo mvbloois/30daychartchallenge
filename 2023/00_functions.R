@@ -13,6 +13,6 @@ create_caption <- function(txt_clr = "grey15", bg = "white", source = "datasourc
   space  <- glue::glue("<span style='color:{bg}'>.</span>")
   space2 <- glue::glue("<span style='color:{bg}'>--</span>") # can't believe I'm doing this
   
-  glue::glue("{table}{space2}{source}<br>{mastodon}{space2}@martijnvanbloois{space}@fosstodon.org{space2}{twitter}{space2}@prancke{space2}{github}{space2}mvbloois")
+  glue::glue("{table}{space2}{source}<br><br>{mastodon}{space2}@martijnvanbloois{space}@fosstodon.org{space2}{twitter}{space2}@prancke{space2}{github}{space2}mvbloois")
   
 }
