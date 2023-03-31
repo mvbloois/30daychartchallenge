@@ -64,11 +64,12 @@ theme_update(
                                   size = 32,
                                   colour = txt,
                                   hjust = 1,
-                                  margin = margin(t = 15)),
+                                  margin = margin(t = 25)),
   plot.margin = margin(b = 20, t = 20, r = 20, l = 20),
   legend.position = "bottom",
   panel.grid.major.x = element_blank(),
-  panel.grid.minor.y = element_blank()
+  panel.grid.minor.y = element_blank(),
+  strip.text.x = element_text(vjust = 1, hjust = 0.5)
 )
 
 ggplot(ingredients, aes(fill = ingredient, values = grams)) +
@@ -80,7 +81,7 @@ ggplot(ingredients, aes(fill = ingredient, values = grams)) +
     title = title,
     subtitle = "Ingredients for 16 sirup waffles, add pinches of salt and cinnamon powder",
     caption = caption,
-    fill = "one grams of:"
+    fill = "one gram of:"
   )
 
 ## Saving ----
@@ -89,3 +90,4 @@ ggsave("./2023/02_waffle.png",
        height = 9, width = 12)
 
 system("open ./2023/02_waffle.png")
+
