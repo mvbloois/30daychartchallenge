@@ -110,3 +110,10 @@ egg_dimensions %>%
   labs(title = "SOME EGGS ARE BIGGER THAN OTHERS",
        subtitle = "subtitle",
        caption = caption)
+
+## Saving ----
+ggsave("./2023/03_fauna-flora.png",
+       bg = bg,
+       height = 9, width = 12)
+
+system("open ./2023/03_fauna-flora.png")
