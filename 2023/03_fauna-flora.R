@@ -15,7 +15,7 @@ sigma <- 4
 bg <- "#296D98"
 txt <- "#DBD76A"
 
-caption <- create_caption(txt, bg, "As of yet unknown")
+caption <- create_caption(txt, bg, "The Internet")
 
 showtext_auto()
 
@@ -25,7 +25,7 @@ theme_set(theme_void())
 theme_update(
   text = element_text(family = "titlefont",
                       colour = txt,
-                      size = 12, lineheight = 0.3),
+                      size = 24, lineheight = 0.3),
   plot.background = element_rect(fill = bg,
                                  colour = bg),
   plot.title.position = "plot",
@@ -34,14 +34,14 @@ theme_update(
                             face = "bold",
                             colour = txt,
                             margin = margin(t = 5, b = 5),
-                            size = 28,
+                            size = 92,
                             hjust = 0.5),
   plot.subtitle = element_text(family = "titlefont",
-                               size = 16,
+                               size = 56,
                                hjust = 0.5
   ),
   plot.caption = element_markdown(family = "titlefont",
-                                  size = 12,
+                                  size = 56,
                                   colour = "grey15",
                                   hjust = 0.5,
                                   margin = margin(b = 5)),
@@ -56,7 +56,7 @@ egg_dimensions <-
     length = c(35, 65, 90),
     image = c("./2023/images/quail.png",
               "./2023/images/duck.png",
-              "./2023/images/goose.png")
+              "./2023/images/goose_resized.png")
   ) 
 
 egg_dimensions %>% 
@@ -89,26 +89,25 @@ egg_dimensions %>%
                colour = txt) +
   # Labels  
   geom_text(aes(x = start_x + diameter * 0.5, y = -15, label = bird),
-            size = 10,
+            size = 36,
             colour = txt,
             fontface = "bold") +
   geom_text(aes(x = start_x + diameter * 0.5, y = -7, label = glue("~{diameter} mm")),
-            size = 5,
+            size = 15,
             fontface = "bold",
             colour = txt) +
   geom_text(aes(x = start_x - sigma - 5 , y = length * 0.5, label = glue("~{length} mm")),
-            size = 5,
+            size = 15,
             angle = 90,
             fontface = "bold",
             colour = txt) +
   # Images
   geom_image(aes(x = start_x + diameter * 0.5, y = length * 0.5,
                  image = image),
-             size = 0.25, asp = 1.3) +
+             size = 0.3, asp = 1.2) +
   ylim(c(-20, 100)) +
   coord_equal() +
-  labs(title = "SOME EGGS ARE BIGGER THAN OTHERS",
-       subtitle = "subtitle",
+  labs(title = "THREE SIZES OF EGGS",
        caption = caption)
 
 ## Saving ----
