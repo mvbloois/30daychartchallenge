@@ -5,6 +5,9 @@ library(ggtext)
 library(ggflags)
 library(countrycode)
 library(showtext)
+install.packages("ggchicklet",                    # Install & load ggchicklet package
+                 repos = "https://cinc.rud.is")
+library(ggchicklet)
 source("./2023/00_functions.R")
 
 txt <- "#002147"
@@ -33,19 +36,20 @@ lead <- read_csv("./2023/data/children-lead-5micrograms.csv") %>%
 
 lead %>% 
   mutate(entity = if_else(entity == "Democratic Republic of Congo", "DR of Congo", entity)) %>% 
-  ggplot(aes(x = children,
-             y = fct_reorder(entity, children))) +
-  geom_col(fill = "#6C6C6A") +
-  geom_flag(aes(x = 0, country = iso2c),
-            size = 36/.pt) +
+  ggplot(aes(x = fct_reorder(entity, children),
+             y = children)) +
+  geom_chicklet(fill = "#6C6C6A",
+                colour = "grey40") +
+  geom_flag(aes(y = 0, country = iso2c),
+            size = 26/.pt) +
   geom_text(data = filter(lead, children > 28e6),
             aes(label = label),
             family = "font",
             colour = "white",
             size = 36/.pt,
             hjust = 1.2,
-            vjust = 0.25) +
-  geom_textbox(aes(x = 75e6, y = "Iraq",
+            vjust = 0.5) +
+  geom_textbox(aes(x = "Iraq", y = 70e6,
            label = t1),
            family = "title",
            size = 46/.pt,
@@ -54,17 +58,18 @@ lead %>%
            colour = txt,
            width = unit(150, "mm"),
            height = unit(60, "mm")) +
-  scale_x_continuous(labels = number_format(big.mark = ".", decimal.mark = ",")) +
+  scale_y_continuous(labels = number_format(big.mark = ".", decimal.mark = ",")) +
   labs(x = NULL,
        y = NULL,
        title = "Lead pollution is a widespread problem that receives little attention",
        subtitle = "Children with blood lead >5 µg/dL",
        caption = caption) +
+  coord_flip() +
   theme_minimal() +
   theme(
     text = element_text(family = "font",
                         colour = txt,
-                        size = 46),
+                        size = 52),
     plot.title.position = "plot",
     plot.title = element_text(family = "title",
                               size = 82),
@@ -73,6 +78,10 @@ lead %>%
     plot.background = element_rect(fill = bg, 
                                    colour = bg),
     axis.ticks.y = element_blank(),
+    axis.text = element_text(size = 52),
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(colour = "#6C6C6A",
+                                      linetype = "dotted"),
     plot.margin = margin(b = 20, t = 20, r = 30, l = 30)
   )
 
@@ -82,3 +91,4 @@ ggsave("./2023/06_owid.png",
        height = 9, width = 12)
 
 system("open ./2023/06_owid.png")
+
