@@ -3,55 +3,7 @@ Cédric Scherer @ced_scherer
 
 
 
-#30DayChartChallenge Day 1 - Part-To-Whole
 
-Data: www.eerstekamernl & ...
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/01_part-to-whole.R
-
-#RStats
-
-
-
-#30DayChartChallenge Day 2 - Waffle
-
-Data: https://www.24kitchen.nl/recepten/stroopwafels
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/02_waffle.R
-
-#RStats
-
-
-
-#30DayChartChallenge Day 3 - Fauna/Flora
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/03_fauna-flora.R
-
-#RStats
-
-
-
-#30DayChartChallenge Day 4 - Historical
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/04_historical.R
-
-#RStats
-
-
-#30DayChartChallenge Day 5 - Slope
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/05_slope.R
-
-#RStats
-
-
-#30DayChartChallenge Day 6 - Data Day: OWID
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/06_owid.R
-
-#RStats
 
 
 #30DayChartChallenge Day 7 - Hazards
