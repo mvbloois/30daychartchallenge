@@ -4,6 +4,4 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
 
 ----
 
-![./2023/01_part-to-whole.png](https://raw.githubusercontent.com/mvbloois/30daychartchallenge/main/2023/01_part-to-whole.png)
-
-![./2023/02_waffle.png](https://raw.githubusercontent.com/mvbloois/30daychartchallenge/main/2023/02_waffle.png)
+![./2023/01_part-to-whole.png](https://raw.githubusercontent.com/mvbloois/30daychartchallenge/main/2023/01_part-to-whole.png) ![./2023/02_waffle.png](https://raw.githubusercontent.com/mvbloois/30daychartchallenge/main/2023/02_waffle.png)
