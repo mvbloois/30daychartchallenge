@@ -45,4 +45,12 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2023/09_high-low.png" width=400 height=300></td>
     <td><img src="./2023/10_hybrid.png" width=400 height=300></td>
   </tr>
+    <tr>
+    <td>Day 11 - Circular</td>
+    <td>Day 12 - BBC News</td>
+  </tr>
+    <tr>
+    <td><img src="./2023/11_circular.png" width=400 height=300></td>
+    <td><img src="./2023/12_bbc-news.png" width=400 height=300></td>
+  </tr>
  </table>
