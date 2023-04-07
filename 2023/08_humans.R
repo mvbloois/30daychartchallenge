@@ -61,7 +61,8 @@ circos.par(start.degree = 45,
 set.seed(3218)
 
 png("./2023/08_humans.png",
-    width = 10, height = 10, units = "in", res = 300)
+    width = 10, height = 10, units = "in", res = 300,
+    bg = "white")
 
 chordDiagram(x = plot_data %>% 
                     as.matrix(),
