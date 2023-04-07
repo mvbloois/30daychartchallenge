@@ -33,7 +33,7 @@ df <- getSymbols("ASML", from = "2022-10-01", to = "2023-03-31", auto.assign = F
   broom::tidy() %>% #https://stackoverflow.com/questions/54888828/what-is-the-best-way-to-transform-an-xts-into-a-tibble
   mutate(series = str_remove(series, "ASML\\.")) %>% 
   pivot_wider(names_from = series, values_from = value) %>%
-  mutate(colour = ifelse(Close > lag(Close), green, red)) %>%
+  mutate(colour = ifelse(Close > Open, green, red)) %>%
   drop_na()
 
 price <- df %>% 
