@@ -7,7 +7,7 @@ library(circlize)
 `%notin%` <- Negate(`%in%`)
 
 eu <- 10
-wrl <- 10
+wrl <- 15
 
 df <- read_delim("./2023/data/migr_asyappctza_tabular.tsv.gz") %>% 
   select(col_1 = 1, 7:16) %>% 
@@ -58,19 +58,23 @@ circos.par(start.degree = 45,
            track.margin = c(-0.1, 0.1), 
            points.overflow.warning = FALSE)
 
-set.seed(321)
+set.seed(3218)
 
-plt <- as.ggplot(
-  ~chordDiagram(x = plot_data %>% 
-                          as.matrix(),
+png("./2023/08_humans.png",
+    width = 10, height = 10, units = "in", res = 300)
+
+chordDiagram(x = plot_data %>% 
+                    as.matrix(),
              order = order,
              directional = 1,
              transparency = 0.5)
-)
 
-plt +
-  labs(title = "Asylum applicants in the EU + CH",
-       subtitle = "Excluding the UK: 2013-2022",
-       caption = "Source: Eurostat")
+title(main = "Asylum Applicants in the European Union 2013-2022")
+text(0, 1, "by country of origin and destination")
+text(0.8, -1, "Data: EuroStat")
+
+dev.off()
 
 circos.clear()
+
+system("open ./2023/08_humans.png")
