@@ -44,4 +44,9 @@ df %>%
         plot.caption = element_text(hjust = 0)
         )
 
-         
+## Saving ----
+ggsave("./2023/12_bbc-news.png",
+       bg = "white",
+       height = 9, width = 12)
+
+system("open ./2023/12_bbc-news.png")      
