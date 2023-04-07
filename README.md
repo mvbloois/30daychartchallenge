@@ -37,4 +37,12 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2023/07_hazards.png" width=400 height=300></td>
     <td><img src="./2023/08_humans.png" width=400 height=300></td>
   </tr>
+  <tr>
+    <td>Day 9 - High/low</td>
+    <td>Day 10 - Hybrid</td>
+  </tr>
+    <tr>
+    <td><img src="./2023/09_high-low.png" width=400 height=300></td>
+    <td><img src="./2023/10_hybrid.png" width=400 height=300></td>
+  </tr>
  </table>
