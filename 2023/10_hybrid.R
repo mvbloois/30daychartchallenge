@@ -1,6 +1,7 @@
 library(tidyverse)
 library(ggforce)
 library(showtext)
+library(PrettyCols)
 
 ## Fonts ----
 font_add_google("Fira Code", "font")
@@ -8,6 +9,7 @@ showtext_auto()
 showtext_opts(dpi = 300)
 
 bg <- "white"
+pal <- prettycols("Dark")
 
 ## Theme ----
 theme_set(theme_void())
@@ -32,13 +34,13 @@ df <- tibble(
 
 ggplot() +
   geom_ellipse(aes(x0 = 0, y0 = 0, a = 5, b = 3, angle = 225),
-               fill = "orange", colour = "orange",  alpha = 0.5) +
+               fill = pal[1], colour = pal[1],  alpha = 0.5) +
   geom_ellipse(aes(x0 = 6, y0 = 0, a = 5, b = 3, angle = 45),
-               fill = "darkgreen", colour = "darkgreen", alpha = 0.5) +
+               fill = pal[2], colour = pal[2], alpha = 0.5) +
   geom_ellipse(aes(x0 = 3, y0 = 5.5, a = 5, b = 3, angle = 0),
-               fill = "darkblue", colour = "darkblue", alpha = 0.5) +
+               fill = pal[3], colour = pal[3], alpha = 0.5) +
   geom_circle(aes(x0 = 7.5, y0 = -3.5, r = 1.2),
-              fill = "darkred", colour = "darkred", alpha = 0.5) +
+              fill = pal[4], colour = pal[4], alpha = 0.5) +
   geom_text(data = filter(df, size == 1),
             aes(x = x, y = y, label = label_en, angle = angle),
             colour = "white", size = 28) +
