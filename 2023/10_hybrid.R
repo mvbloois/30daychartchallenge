@@ -17,7 +17,8 @@ theme_update(
                       size = 62,
                       colour = stone),
   plot.background = element_rect(colour = bg,
-                                 fill = bg)
+                                 fill = bg),
+  plot.caption = element_text(size = 24)
 )
 
 df <- tibble(
