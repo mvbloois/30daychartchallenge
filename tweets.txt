@@ -4,33 +4,18 @@ Cédric Scherer @ced_scherer
 
 
 
+#30DayChartChallenge #Day11 - Circular
 
+A copy @_ansgar's Trees of New York City, but with sharks and rays.
 
-#30DayChartChallenge #Day9 - High/Low
-
-Data: Yahoo Finance
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/09_high-low.R
-
-#rstats
-
-
-#30DayChartChallenge Day 10 - Hybrid
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/10_hybrid.R
-
-#rstats
-
-
-#30DayChartChallenge Day 11 - Circular
-
-Data:
+Idea: https://twitter.com/_ansgar/status/1642831691428274177
+Data: www.shark-references.com
 🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/11_circular.R
 
 #rstats
 
 
-#30DayChartChallenge Day 12 - Theme Day: BBC News
+#30DayChartChallenge #Day12 - Theme Day: BBC News
 
 Data:
 🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/12-bbc-news.R
