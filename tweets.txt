@@ -4,33 +4,6 @@ Cédric Scherer @ced_scherer
 
 
 
-#30DayChartChallenge #Day11 - Circular
-
-A copy @_ansgar's Trees of New York City, but with sharks and rays.
-
-Idea: https://twitter.com/_ansgar/status/1642831691428274177
-Data: www.shark-references.com
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/11_circular.R
-
-#rstats
-
-
-#30DayChartChallenge #Day12 - Theme Day: BBC News
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/12-bbc-news.R
-
-#rstats
-
-
-#30DayChartChallenge Day 13 - Pop Culture
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/13_pop-culture.R
-
-#rstats
-
-
 #30DayChartChallenge Day 14 - New Tool
 
 Data:
