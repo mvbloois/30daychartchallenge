@@ -119,7 +119,7 @@ plt_4 <- kpop %>%
   scale_x_log10() +
   labs(x = "speechiness of track") +
   ylim(c(0,1)) +
-  labs(title = "Danceability and speechiness go hand in hand") +
+  labs(title = "Less words means less dancing?") +
   guides(colour = "none")
 
 (plt_3 + plt_4) / (plt_1 + plt_2) +
