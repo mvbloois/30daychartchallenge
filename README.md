@@ -2,7 +2,7 @@
 
 The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driven event with the goal to create a data visualization on a certain topic each day of April.
 
-<img src="./resources/tdcc_2023.jpg" width=1600 height=300>
+<img src="./resources/tdcc_2023.jpg" width=1200 height=300>
 ----
 
 <table>
