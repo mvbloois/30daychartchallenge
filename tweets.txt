@@ -1,20 +1,36 @@
 TanyaShaprio @tanya_shapiro
 Cédric Scherer @ced_scherer
 
+https://huizezhang-sherry.github.io/cubble/articles/glyph.html
 
 
 
-#30DayChartChallenge Day 14 - New Tool
+#30DayChartChallenge Day 13 - Pop Culture
 
-Data:
+Today I look at K-Pop.
+
+Data: Kaggle, maintained by Sandra Angela Berjamin
+🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/13_pop-culture.R
+
+#rstats
+
+
+
+#30DayChartChallenge #Day14 - New Tool
+
+I used Observablehq to create the bubble chart from a template, that was easy. I tried to add titles and caption, but I failed. So I added them in HTML. Finally I made a screenshot.
+
+Data: www.gipdatabank.nl
 🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/202314_new-tool.R
 
 #rstats
 
 
-#30DayChartChallenge Day 15 - Positive/Negative
+#30DayChartChallenge #Day15 - Positive/Negative
 
-Data:
+When temperatures change from positive to negative the state of water changes, as does the mental state of the Dutch.
+
+Data: www.knmi.nl
 🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/15_positive-negative.R
 
 #rstats
