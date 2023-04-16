@@ -1,0 +1,141 @@
+station,is_station,lat,lon
+'t harde,1,52.4091514,5.8926641
+acht,1,51.4817688,5.4422318
+almelo,1,52.3575366,6.6557903
+almere centrum,1,52.3752735,5.2193265
+almere oostvaarders,1,52.4032804,5.3006021
+amersfoort aansluiting,0,52.15298,5.36237
+amersfoort schothorst,1,52.1748604,5.4038593
+amersfoort vathorst,1,52.1925513,5.4336126
+amersfoort,1,52.153898,5.3740976
+amsterdam bijlmer,1,52.3122449,4.9470883
+amsterdam centraal,1,52.3783344,4.900322345175953
+amsterdam muiderpoort,1,52.3608341,4.9311934
+amsterdam riekerpolder aansluiting,0,52.33844,4.82615
+amsterdam riekerpolder,0,52.33844,4.82615
+amsterdam sloterdijk,1,52.3890161,4.838877
+amsterdam zuid,1,52.3377124,4.8893261
+apeldoorn,1,52.2092784,5.9689735
+arnhem,1,51.9844332,5.9011598
+barendrecht aansluiting,0,51.8453,4.5717
+barneveld aansluiting,0,52.16216,5.59505
+barneveld,1,52.1409575,5.5892123
+beatrixhaven aansluiting,0,50.87469,5.72355
+bergen op zoom,1,51.4961191,4.2960429
+binckhorst,0,52.07375,4.34163
+blauwkapel,0,52.11327,5.14056
+blerick,1,51.3716295,6.1536552
+boxmeer,1,51.644139550000006,5.939891371868031
+boxtel,1,51.5851962,5.3192504
+breda aansluiting,0,51.60801,4.72047
+breda,1,51.5951433,4.7800231
+breukelen,1,52.1700806,4.9913057
+crailoo,0,52.25469,5.16888
+de haar aansluiting,0,52.05142,5.47498
+delden,1,52.2602968,6.7145935
+delft,1,52.0073979,4.3581707
+den dolder,1,52.1387147,5.2435013
+den haag centraal,1,52.0808443,4.3245487
+den haag hs,1,52.0701372,4.3222758
+den haag laan van noi,1,52.0789705,4.3432643
+den haag ypenburg,1,52.0558168,4.390848
+deurne,1,51.4564167,5.7876469
+deventer,1,52.2572928,6.1611049
+dordrecht,1,51.8036723,4.7179212
+driebergen/zeist,1,52.0652455,5.2602392
+duivendrecht aansluiting west,0,52.32188,4.92937
+ede/wageningen,1,52.0285471,5.6719692
+eijsden grens,0,50.7591,5.7064
+eindhoven,1,51.4429623,5.4795265
+elst,1,51.9171924,5.8541559
+erasmusgracht aansluiting,0,52.37752,4.8387
+gaasperdammerweg aansluiting,0,52.334,4.9968
+gekkengraaf,0,51.4075,6.0834
+geldermalsen aansluiting,0,51.89371,5.26861
+geldermalsen,1,51.8814722,5.270693447647334
+geleen lutterade dsm aansluiting,0,50.97587,5.8253
+goor,1,52.2305137,6.5854423
+gouda goverwelle,1,52.0150128,4.7420993
+gouda,1,52.0167994,4.7071483
+groningen europapark,1,53.2047056,6.585821
+groningen,1,53.2109237,6.5641028
+haanrade grens,0,50.88077,6.0854799999999996
+haanrade,0,50.88689,6.07521
+harderwijk,1,52.3380584,5.6213496
+harmelen aansluiting,0,52.1046,4.9586
+hattemerbroek aansluiting,0,52.48788,6.05498
+heerlen,1,50.8894668,5.974596
+hemtunnel aansluiting,0,52.4464,4.812
+hengelo,1,52.2621518,6.793694243421051
+herfte aansluiting,0,52.50642,6.14142
+hilversum,1,52.225082,5.180912
+hoofddorp,1,52.3009075,4.6641356
+hoogeveen,1,52.7331853,6.4732362
+keverdijk aansluiting,0,52.30435,5.0673
+kijfhoek,0,51.8324,4.5964
+lage zwaluwe,1,51.6901564,4.6637116
+landgraaf,1,50.9121607,6.0368592
+leiden centraal,1,52.1663091,4.4837223
+lelystad centrum,1,52.5079328,5.4727185
+lewedorp aansluiting,0,51.5027,3.7532
+lutterade aansluiting,0,50.99632,5.85395
+maarssen,1,52.13674135,5.031136811564689
+maastricht randwyck,1,50.8376341,5.7176213
+maastricht,1,50.84941345,5.705701066404448
+meppel,1,52.6919049,6.1979382
+meteren aansluiting br noord,0,51.86877,5.27047
+meteren aansluiting br zuid,0,51.85616,5.26103
+moordrecht aansluiting,0,52.0109,4.6655
+muiderberg aansluiting,0,52.31056,5.07714
+nieuweschans grens,0,53.1877,7.2181
+nieuweschans,1,53.1847702,7.2005246
+nijmegen,1,51.8264683,5.823365
+nijverdal,1,52.3669341,6.4626083
+oldenzaal grens,0,52.3091,7.044
+oldenzaal,1,52.306605,6.9350536
+onnen,0,53.1572,6.634
+radarweg aansluiting,0,52.38825,4.83631
+riekerpolder aansluiting,0,52.33816,4.82639
+roermond,1,51.1925659,5.9938511
+roosendaal grens,0,51.4695,4.4524
+roosendaal,1,51.5400636,4.4591421
+rotterdam centraal,1,51.9239359,4.4696361
+rotterdam lombardijen,1,51.8803596,4.5310527
+rotterdam noord,1,51.9422401,4.4815868
+rotterdam,1,51.9239359,4.4696361
+s heer arendskerke aansluiting,0,51.49143,3.83558
+s hertogenbosch,1,51.69031,5.29448
+schiedam centrum,1,51.9209419,4.4114117
+schiphol,1,52.30967,4.76213
+singelgracht aansluiting,0,52.3858,4.8861
+sittard,1,51.0011631,5.8590254
+snippeling aansluiting,0,52.25217,6.19662
+tilburg universiteit,1,51.5652341,5.0516776
+tilburg,1,51.560531,5.0837293
+tongelre aansluiting,0,51.44504,5.50408
+transformatorweg aansluiting,0,52.39397,4.84059
+uitgeest,1,52.5218213,4.7025782
+utrecht centraal,1,52.0893925,5.109821
+utrecht lunetten aansluiting,0,52.0722,5.1365
+utrecht vaartsche rijn,1,52.0787573,5.1218783
+utrecht,1,52.0893925,5.109821
+vaartsche rijn,1,52.0776507,5.1229488
+velperbroek aansluiting,0,51.98326,5.92789
+venlo grens,0,51.34095,6.19452
+venlo,1,51.364699349999995,6.1718519339562565
+venray,1,51.5266018,6.0139603
+venserpolder aansluiting,0,52.32667,4.94728
+vught aansluiting,0,51.6611,5.2935
+warmond aansluiting,0,52.19765,4.49483
+waterhuizen aansluiting,0,53.1858,6.6436
+weert,1,51.249108,5.7059896
+weesp,1,52.3114479,5.0438746
+wierden,1,52.36154,6.5921524
+woerden,1,52.0853131,4.8924487
+zaandam,1,52.4379099,4.8133576
+zevenaar grens,0,51.9012,6.1411
+zevenaar,1,51.9234971,6.0730301
+zevenbergschehoek aansluiting,0,51.68108,4.67074
+zuidbroek,1,53.1592644,6.8656686
+zutphen,1,52.1442449,6.193508474668822
+zwolle,1,52.5045147,6.0903562
