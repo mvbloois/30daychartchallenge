@@ -5,56 +5,13 @@ https://huizezhang-sherry.github.io/cubble/articles/glyph.html
 
 
 
-#30DayChartChallenge Day 13 - Pop Culture
-
-Today I look at K-Pop.
-
-Data: Kaggle, maintained by Sandra Angela Berjamin
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/13_pop-culture.R
-
-#rstats
 
 
+#30DayChartChallenge #Day18 - Data Day: EuroStat
 
-#30DayChartChallenge #Day14 - New Tool
+What's up with Liechtenstein?
 
-I used Observablehq to create the bubble chart from a template, that was easy. I tried to add titles and caption, but I failed. So I added them in HTML. Finally I made a screenshot.
-
-Data: www.gipdatabank.nl
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/202314_new-tool.R
-
-#rstats
-
-
-#30DayChartChallenge #Day15 - Positive/Negative
-
-When temperatures change from positive to negative the state of water changes, as does the mental state of the Dutch.
-
-Data: www.knmi.nl
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/15_positive-negative.R
-
-#rstats
-
-
-#30DayChartChallenge Day 16 - Family
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/16_family.R
-
-#rstats
-
-
-#30DayChartChallenge Day 17 - Networks
-
-Data:
-🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/17_networks.R
-
-#rstats
-
-
-#30DayChartChallenge Day 18 - Data Day: EuroStat
-
-Data:
+Data: Eurostat
 🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/18_eurostat.R
 
 #rstats
