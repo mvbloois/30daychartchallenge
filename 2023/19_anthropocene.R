@@ -1,102 +1,103 @@
 library(tidyverse)
-library(dplyr)
-library(ggplot2)
-
-## https://stackoverflow.com/questions/41391271/plot-an-archimedean-spiral-using-integer-values-with-ggplot2
-
-
-france <- rvest::read_html("https://www.atomicarchive.com/almanac/test-sites/french-testing.html") %>% 
-  rvest::html_element("table") %>% 
-  rvest::html_table() %>% 
-  janitor::clean_names() %>% 
-  mutate(country = "France")
-
-china <- rvest::read_html("https://www.atomicarchive.com/almanac/test-sites/prc-testing.html") %>% 
-  rvest::html_element("table") %>% 
-  rvest::html_table() %>% 
-  janitor::clean_names() %>% 
-  mutate(country = "China")
-
-soviet <- rvest::read_html("https://www.atomicarchive.com/almanac/test-sites/soviet-testing.html") %>% 
-  rvest::html_element("table") %>% 
-  rvest::html_table() %>% 
-  janitor::clean_names() %>% 
-  mutate(country = "Soviet Union")
-
-uk <- rvest::read_html("https://www.atomicarchive.com/almanac/test-sites/uk-testing.html") %>% 
-  rvest::html_element("table") %>% 
-  rvest::html_table() %>% 
-  janitor::clean_names() %>% 
-  mutate(country = "United Kingdom") %>% 
-  select(-notes)
-
-us <- rvest::read_html("https://www.atomicarchive.com/almanac/test-sites/us-testing.html") %>% 
-  rvest::html_element("table") %>% 
-  rvest::html_table() %>% 
-  janitor::clean_names() %>% 
-  mutate(country = "USA",
-         tests = as.numeric(tests),
-         years = ifelse(str_length(years) > 4, paste0(str_sub(years, 1, 5), "19", str_sub(years, 6, 7)), years)
-  )
-
-df <- bind_rows(
-  france,
-  china,
-  soviet,
-  uk,
-  us
-) %>% 
-  filter(years != "Totals") %>% 
-  filter(years != "") %>% 
-  select(country, years, tests, total_yield_kilotons) %>% 
-  drop_na() %>% 
-  mutate(total_yield_kilotons = parse_number(total_yield_kilotons)) %>% 
-  mutate(x_axis = ifelse(str_length(years) == 4,
-                         as.numeric(years),
-                         round((as.numeric(str_extract(years, "[0-9]{4}+$")) + as.numeric(str_extract(years, "^[0-9]{4}+")) + 1) / 2, 0)
-  )
-  )
+library(ggimage)
+library(showtext)
+library(rvest)
 
 
+## Fonts ----
+font_add_google("Atomic Age", "font")
+font_add_google("Fira Sans", "subfont")
+showtext_auto()
+
+## https://www.svgrepo.com/
+image <- "./2023/data/nuclear-bomb-svgrepo-com.svg"
+image_txt <- paste(readLines(image), collapse = "\n")
+
+atom <- svgparser::read_svg("./2023/data/atom.svg")
+
+df <-
+  read_html("https://www.atomicarchive.com/almanac/test-sites/testing-chronology.html") %>%
+  html_element("table") %>%
+  html_table() %>%
+  select(-Total) %>%
+  filter(Country != "Totals") %>%
+  pivot_longer(
+    cols = -Country,
+    names_to = "period",
+    names_transform = list(period = as.character),
+    values_to = "tests"
+  ) %>%
+  mutate(
+    Country = str_replace(Country, "\u00A0", " "),
+    country = factor(
+      Country,
+      levels = c(
+        "Pakistan",
+        "India",
+        "France",
+        "United States",
+        "Russia/USSR",
+        "United Kingdom",
+        "China",
+        "North Korea"
+      )
+    ),
+    period = factor(period)
+  ) 
+
+periods <- as.character(unique(df$period))
+
+df_2 <- df %>% 
+  group_by(country) %>% 
+  summarise(total_tests = sum(tests),
+            .groups = "drop") %>% 
+  mutate(label = glue::glue("{total_tests} tests"))
 
 df %>% 
+  filter(tests > 0) %>% 
+  ggplot(aes(x = as.numeric(period), y = as.numeric(country))) +
+  geom_image(aes(y = as.numeric(country) - 0.1, image = image, size = tests)) +
+  geom_text(aes(x = 0, y = as.numeric(country), label = country),
+            family = "font",
+            size = 14,
+            hjust = "right",
+            fontface = "bold",
+            colour = "#EE4B2B") +
+  geom_text(data = df_2,
+            aes(x = 0, y = as.numeric(country) - 0.3, label = label),
+            family = "font",
+            size = 12,
+            hjust = "right",
+            colour = "#EE4B2B") +
+  scale_size_continuous(range = c(0.02, 0.1), guide = 'none') +
+  scale_x_continuous(limits = c(-1, NA),
+                     breaks = 1:8,
+                     labels = periods) +
+  scale_y_continuous(limits = c(0.5, NA)) +
+  labs(
+    title = str_to_upper("Nuclear Testing"),
+    subtitle = str_wrap("Since the first nuclear test explosion on July 16, 1945, at least eight nations have detonated 2,056 nuclear test explosions at dozens of test sites, including Lop Nor in China, the atolls of the Pacific, Nevada, Algeria where France conducted its first nuclear device, western Australia where the U.K. exploded nuclear weapons, the South Atlantic, Semipalatinsk in Kazakhstan, across Russia, and elsewhere.", 100),
+    caption = "Data: https://www.atomicarchive.com/",
+    y = NULL
+  ) +
+  coord_cartesian(clip = "off") +
+  theme_void() +
+  theme(
+    text = element_text(family = "font",
+                        size = 40,
+                        colour = "#EE4B2B"),
+    plot.background = element_rect(fill = "#343231"),
+    plot.title = element_text(size = 102),
+    plot.subtitle = element_text(family = "subfont",
+                                 size = 45,
+                                 lineheight = 0.3),
+    axis.text.x = element_text(),
+    plot.margin = margin(b = 20, t = 20, r = 20, l = 20)
+  )
   
-  ggplot(aes(x = x_axis, y = tests, fill = country)) +
-  geom_col(position = "stack") 
+## Saving ----
+ggsave("./2023/19_anthropocene.png",
+       bg = "#343231",
+       height = 9, width = 11)
 
-
-
-
-
-
-
-
-
-
-
-
-
-a <- 2
-b <- 3
-theta <- seq(0,25*pi,0.01)
-r <- a + b*theta
-df <- tibble(
-         x=r*cos(theta),
-         y=r*sin(theta)
-         ) %>% # Cartesian coords
-  mutate(rn = row_number(),
-         age = case_when(rn <= 42 ~ "Meghalayan",
-                         rn <= 82 ~ "Northgrippian",
-                         rn <= 117 ~ "Greenlandia",
-                         rn <= 1290 ~ "Upper Taratian",
-                         rn <= 7740 ~ "Chibanian",
-                         TRUE ~ "older"))
-
-ggplot(df) +
-  geom_path(aes(x, y, group = 1, colour = age),
-            linewidth = 1) +
-  ggthemes::scale_color_tableau() +
-  theme_minimal()
-
-
-df
+system("open ./2023/19_anthropocene.png")
