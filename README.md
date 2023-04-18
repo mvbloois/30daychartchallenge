@@ -79,4 +79,12 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2023/17_networks.png" width=400 height=300></td>
     <td><img src="./2023/18_eurostat.png" width=400 height=300></td>
   </tr>
+    <tr>
+    <td>Day 19 - Anthropocene</td>
+    <td>Day 20 - Correlation</td>
+  </tr>
+  <tr>
+    <td><img src="./2023/19_anthropocene.png" width=400 height=300></td>
+    <td><img src="./2023/20_correlation.png" width=400 height=300></td>
+  </tr>
 </table>
