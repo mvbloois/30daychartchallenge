@@ -1,11 +1,15 @@
 library(tidyverse)
 library(gghighlight)
 library(patchwork)
-library(ggplotify)
 library(xts)
 library(ggdendro)
+library(showtext)
+
+font_add_google("Bitter", "font")
+showtext_auto()
 
 `%notin%` <- Negate(`%in%`)
+bg <- alpha("#FFCC00", 0.1)
 
 df <- read_delim("./2023/data/demo_gind_tabular.tsv.gz") %>% 
   janitor::clean_names() %>% 
@@ -84,12 +88,16 @@ plt_1 <- df %>%
     ) +
   theme_minimal() +
   theme(
-    text = element_text(colour = "#003399"),
+    text = element_text(family = "font",
+                        size = 40,
+                        colour = "#003399"),
     plot.title.position = "plot",
-    plot.title = element_text(hjust = 0.5),
+    plot.title = element_text(size = 50,
+                              hjust = 0.5),
     plot.background = element_rect(fill = alpha("#FFCC00", 0.0),
                                    colour = alpha("#FFCC00", 0.0)),
-    strip.text = element_text(colour = "#003399"),
+    strip.text = element_text(size = 40,
+                              colour = "#003399"),
     axis.text = element_text(colour = "#003399"),
     panel.grid.minor = element_blank(),
     panel.grid.major = element_line(colour = alpha("#003399", 0.4),
@@ -110,20 +118,36 @@ m <- df %>%
 
 
 d1 <- TSclust::diss(m, "COR")
-d2 <-hclust(d1)
+d2 <- hclust(d1)
 
-plt_2 <- ggdendrogram(d2, rotate = TRUE, size = 2) +
+dhc <- as.dendrogram(d2)
+data <- dendro_data(dhc, type = "rectangle")
+
+plt_2 <- ggplot(segment(data)) + 
+  geom_segment(aes(x = x, y = y, xend = xend, yend = yend),
+               colour = "#003399") + 
+  geom_text(data = data$labels,
+            aes(x = x, y = y - 0.05, label = label),
+            family = "font",
+            size = 12,
+            colour = "#003399",
+            hjust = "left") +
   geom_hline(yintercept = 0.575,
              linetype = "dotted",
              colour = "#003399") +
+  coord_flip() +
+  scale_y_reverse(expand = c(0.2, 0)) +
   labs(title = "Clustering") +
+  theme_void() +
   theme(
-    text = element_text(colour = "#003399"),
+    text = element_text(family = "font",
+                        size = 40,
+                        colour = "#003399"),
         plot.title.position = "plot",
     plot.title = element_text(hjust = 0.5),
         plot.background = element_rect(fill = alpha("#FFCC00", 0.0),
                                        colour = alpha("#FFCC00", 0.0)),
-        axis.text = element_text(colour = "#003399")
+        axis.text.x = element_text(colour = "#003399")
       )
 
 
@@ -137,10 +161,21 @@ AAAAAB
 plt_1 / plt_2+ 
   plot_layout(design = layout) +
   plot_annotation(
-    title = "Population development in Europe 1960 - 2021",
+    title = str_to_upper("Population development in Europe 1960 - 2021"),
     caption = "Data: EuroStat",
-    theme = theme(text = element_text(colour = "#003399"),
+    theme = theme(text = element_text(family = "font",
+                                      colour = "#003399"),
                   plot.background = element_rect(fill = alpha("#FFCC00", 0.1)),
                   plot.title.position = "plot",
-                  plot.title = element_text(hjust = 0.5))
+                  plot.title = element_text(size = 88,
+                                            face = "bold",
+                                            hjust = 0.5),
+                  plot.caption = element_text(size = 40),
+                  plot.margin = margin(b = 20, t = 20, r = 30, l = 30))
   )
+
+## Saving ----
+ggsave("./2023/20_correlation.png", bg = "white",
+       height = 9, width = 12)
+
+system("open ./2023/20_correlation.png")
