@@ -17,9 +17,12 @@ Data: Eurostat
 #rstats
 
 
-#30DayChartChallenge Day 19 - Anthropocene
+#30DayChartChallenge #Day19 - Anthropocene
 
-Data:
+Today I look at nuclear testing.
+
+svg: https://www.svgrepo.com/
+Data: https://www.atomicarchive.com/
 🔗: https://github.com/mvbloois/30daychartchallenge/blob/main/2023/19_anthropocene.R
 
 #rstats
