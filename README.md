@@ -96,7 +96,7 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2023/22_green-energy.png" width=400 height=300></td>
   </tr>
     <tr>
-    <td>Day 23 - Tiles/td>
+    <td>Day 23 - Tiles</td>
     <td>Day 24 - UN Women</td>
   </tr>
   <tr>
