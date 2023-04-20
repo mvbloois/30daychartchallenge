@@ -31,7 +31,7 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2023/05_slope.png" width=400 height=300></td>
     <td><img src="./2023/06_owid.png" width=400 height=300></td>
   </tr>
-    <tr>
+  <tr>
     <td>Day 7 - Hazards</td>
     <td>Day 8 - Humans</td>
   </tr>
@@ -79,12 +79,28 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2023/17_networks.png" width=400 height=300></td>
     <td><img src="./2023/18_eurostat.png" width=400 height=300></td>
   </tr>
-    <tr>
+  <tr>
     <td>Day 19 - Anthropocene</td>
     <td>Day 20 - Correlation</td>
   </tr>
   <tr>
     <td><img src="./2023/19_anthropocene.png" width=400 height=300></td>
     <td><img src="./2023/20_correlation.png" width=400 height=300></td>
+  </tr>
+  <tr>
+    <td>Day 21 - Down/Upward</td>
+    <td>Day 22 - Green energy</td>
+  </tr>
+  <tr>
+    <td><img src="./2023/21_down-upward.png" width=400 height=300></td>
+    <td><img src="./2023/22_green-energy.png" width=400 height=300></td>
+  </tr>
+    <tr>
+    <td>Day 23 - Tiles/td>
+    <td>Day 24 - UN Women</td>
+  </tr>
+  <tr>
+    <td><img src="./2023/23_tiles.png" width=400 height=300></td>
+    <td><img src="./2023/24_un-women.png" width=400 height=300></td>
   </tr>
 </table>
