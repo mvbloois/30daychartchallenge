@@ -55,7 +55,7 @@ ggplot() +
                      labels = scales::label_comma(suffix = " h")) + 
   scale_colour_manual(name = "Country", values = pal) +
   labs(
-    title = str_to_upper("As per capita GDP goes up, working hours go down"),
+    title = str_to_upper("As income goes up, working hours go down"),
     subtitle = "",
     caption = "Data: Our World In Data",
     x = "GDP per capita",
