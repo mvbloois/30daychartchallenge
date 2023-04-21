@@ -69,7 +69,7 @@ electricity %>%
     x = NULL,
     y = NULL,
     title = str_to_upper("Still a long way to go"),
-    subtitle = str_wrap("Natural gas has historically been the most important source of energy production in the Netherlands, and the country has been one of the largest producers and exporters of natural gas in Europe. However, in recent years, there has been a shift away from natural gas due to concerns about its environmental impact, particularly with regards to the production and release of methane.\nTo replace natural gas, the Dutch government has been promoting the use of renewable energy sources such as wind and solar power. The Netherlands has one of the largest offshore wind farms in the world, and the government has set a target to generate 70% of the country's electricity from renewable sources by 2030 (ChatGPT 2023).", 120),
+    subtitle = str_wrap("Natural gas has historically been the most important source of energy production in the Netherlands, and the country has been one of the largest producers and exporters of natural gas in Europe. However, in recent years, there has been a shift away from natural gas due to concerns about its environmental impact, particularly with regards to the production and release of methane. To replace natural gas, the Dutch government has been promoting the use of renewable energy sources such as wind and solar power. The Netherlands has one of the largest offshore wind farms in the world, and the government has set a target to generate 70% of the country's electricity from renewable sources by 2030 (ChatGPT 2023).", 120),
     caption = "Data: Centraal Bureau voor de Statistiek / 80030ned"
   ) +
   guides(fill = "none") +
