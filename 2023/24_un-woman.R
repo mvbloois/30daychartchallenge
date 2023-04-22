@@ -240,7 +240,7 @@ AAAAAAA
 plot / map +
   plot_layout(design = lo) +
   plot_annotation(
-    title = "UN WOMEN: Woman in National Assemblies",
+    title = "UN WOMEN: Women in National Assemblies",
     subtitle = str_wrap("From the local to the global level, women's leadership and political participation are restricted. Women are underrepresented as voters, as well as in leading positions, whether in elected office, the civil service, the private sector or academia. This occurs despite their proven abilities as leaders and agents of change, and their right to participate equally in democratic governance.", 100),
     caption = "Data: IPU Parline"
     ) & 
