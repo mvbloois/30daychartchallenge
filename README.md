@@ -97,10 +97,10 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
   </tr>
     <tr>
     <td>Day 23 - Tiles</td>
-    <td>Day 24 - UN Women</td>
+    <td>Day 24 - UN Woman</td>
   </tr>
   <tr>
     <td><img src="./2023/23_tiles.png" width=400 height=300></td>
-    <td><img src="./2023/24_un-women.png" width=400 height=300></td>
+    <td><img src="./2023/24_un-woman.png" width=400 height=300></td>
   </tr>
 </table>
