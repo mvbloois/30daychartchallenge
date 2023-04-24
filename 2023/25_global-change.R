@@ -13,6 +13,47 @@ showtext_auto()
 
 countrycode('Turkey', origin = 'country.name', destination = 'continent')
 
+population <- read_xlsx("./2023/data/P_Data_Extract_From_World_Development_Indicators.xlsx") %>% 
+  clean_names() %>% 
+  select(country = country_name,
+         population_1990 = x1990_yr1990,
+         population_2021 = x2021_yr2021) %>% 
+  mutate(across(starts_with("population"), as.numeric)) %>% 
+  mutate(country = case_when(country == "Hong Kong SAR, China" ~ "Hong Kong, China (SAR)",
+                             country == "Korea, Rep." ~ "Korea (Republic of)",
+                             country == "Slovak Republic" ~ "Slovakia",
+                             country == "Turkiye" ~  "Turkey",
+                             country == "Bahamas, The" ~ "Bahamas",
+                             country == "St. Kitts and Nevis" ~ "Saint Kitts and Nevis",
+                             country == "Iran, Islamic Rep." ~ "Iran (Islamic Republic of)",
+                             country == "Moldova" ~ "Moldova (Republic of)",
+                             country == "St. Vincent and the Grenadines" ~ "Saint Vincent and the Grenadines",
+                             country == "Egypt, Arab Rep." ~ "Egypt",
+                             country == "St. Lucia" ~ "Saint Lucia",
+                             country == "Vietnam" ~ "Viet Nam",
+                             country == "Bolivia" ~ "Bolivia (Plurinational State of)",
+                             country == "Venezuela, RB" ~ "Venezuela (Bolivarian Republic of)",
+                             country == "West Bank and Gaza" ~ "Palestine, State of",
+                             country == "Gambia, The" ~ "Gambia",
+                             country == "Eswatini" ~ "Eswatini (Kingdom of)",
+                             country == "Kyrgyz Republic" ~ "Kyrgyzstan",
+                             country == "Micronesia, Fed. Sts." ~ "Micronesia (Federated States of)",
+                             country == "Lao PDR" ~ "Lao People's Democratic Republic",  
+                             country == "Congo, Rep." ~ "Congo",                             
+                             country == "Cote d'Ivoire" ~ "Côte d'Ivoire",
+                             country == "Tanzania" ~ "Tanzania (United Republic of)",
+                             country == "Congo, Dem. Rep." ~ "Congo (Democratic Republic of the)",
+                             country == "Yemen, Rep." ~ "Yemen",
+                             
+                             TRUE ~ country)) %>% 
+  pivot_longer(
+    cols = starts_with("population"),
+    names_to = "year",
+    names_prefix = "population_",
+    values_to = "population"
+  ) 
+  
+
 hdi <-
   read_xlsx("./2023/data/HDR21-22_Statistical_Annex_HDI_Trends_Table.xlsx",
             skip = 4) %>%
@@ -33,10 +74,15 @@ hdi <-
   mutate(
     country = ifelse(country == "Türkiye", "Turkey", country),
     continent = countrycode(country, origin = 'country.name', destination = 'continent')
+  ) %>% 
+  inner_join(
+    population,
+    by = join_by(country, year)
   )
 
 hdi_old <-
-  lm(hdi ~ continent, data = filter(hdi, year == min(year))) %>%
+  lm(hdi ~ continent, data = filter(hdi, year == min(year)),
+     weights = population) %>%
   emmeans("continent") %>%
   tidy() %>%
   mutate(
@@ -46,7 +92,8 @@ hdi_old <-
   )
 
 hdi_new <-
-  lm(hdi ~ continent, data = filter(hdi, year == max(year))) %>%
+  lm(hdi ~ continent, data = filter(hdi, year == max(year)),
+     weights = population) %>%
   emmeans("continent") %>%
   tidy() %>%
   mutate(
