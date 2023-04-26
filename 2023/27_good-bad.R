@@ -1,3 +1,5 @@
+## https://www.cedricscherer.com/2021/06/06/visualizing-distributions-with-raincloud-plots-and-how-to-create-them-with-ggplot2/
+
 library(tidyverse)
 library(ggdist)
 library(colorspace)
@@ -66,14 +68,14 @@ df %>%
     linewidth = 1.2,
     colour = "darkred"
   ) +
-  geom_text(aes(x = 1, y = 7, label = "The Good, the Bad and the Ugly (1966)"),
+  geom_text(aes(x = 1, y = 6.95, label = "The Good, the Bad and the Ugly (1966)"),
             family = "rye",
             size = 16,
             vjust = 5,
             colour = "darkred") +
   scale_fill_manual(values = c("#554124", "#23904F", "#3C2515")) +
   coord_flip(xlim = c(1.2, NA),
-             ylim = c(1, 10)) +
+             ylim = c(NA, 10)) +
   labs(
     title = "Good, Bad Or Ugly?",
     subtitle = "Ratings of movies with either good, bad or ugly in the title",
@@ -113,5 +115,5 @@ system("open ./2023/27_good-bad.png")
 
 
 
-#fs::file_delete("./2023/data/title.ratings.tsv.gz")
-#fs::file_delete("./2023/data/title.basics.tsv.gz")
+# fs::file_delete("./2023/data/title.ratings.tsv.gz")
+# fs::file_delete("./2023/data/title.basics.tsv.gz")
