@@ -111,4 +111,12 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2023/25_global-change.png" width=400 height=300></td>
     <td><img src="./2023/26_local-change.png" width=400 height=300></td>
   </tr>
+  <tr>
+    <td>Day 27 - Good/bad</td>
+    <td>Day 28 - Trend</td>
+  </tr>
+  <tr>
+    <td><img src="./2023/27_good-bad.png" width=400 height=300></td>
+    <td><img src="./2023/28_trend.png" width=400 height=300></td>
+  </tr>  
 </table>
