@@ -8,10 +8,10 @@ library(showtext)
 font_add_google("Rye", "rye")
 showtext_auto()
 
-# download.file("https://datasets.imdbws.com/title.basics.tsv.gz",
-#               destfile = "./2023/data/title.basics.tsv.gz")
-# download.file("https://datasets.imdbws.com/title.ratings.tsv.gz",
-#               destfile = "./2023/data/title.ratings.tsv.gz")
+download.file("https://datasets.imdbws.com/title.basics.tsv.gz",
+              destfile = "./2023/data/title.basics.tsv.gz")
+download.file("https://datasets.imdbws.com/title.ratings.tsv.gz",
+              destfile = "./2023/data/title.ratings.tsv.gz")
 
 good <- "[Gg]ood |[Gg]ood$|[Gg]ood-|[Gg]ood,"
 bad  <- "[Bb]ad |[Bb]ad$|[Bb]ad-|[Bb]ad-,"
@@ -52,12 +52,13 @@ df %>%
   filter(type %in% c("Ugly", "Bad", "Good")) %>%
   ggplot(aes(x = type, y = averageRating, fill = type)) +
   stat_dots(side = "left",
+            fill = "darkgreen",
             colour = "darkgreen",
             alpha = 0.75) +
   stat_halfeye(
     adjust = .5,
     width = .6,
-    justification = -.1,
+    #justification = -.1,
     .width = c(.5, .95),
     point_colour = "black",
     alpha = 0.75
@@ -68,7 +69,7 @@ df %>%
     linewidth = 1.2,
     colour = "darkred"
   ) +
-  geom_text(aes(x = 1, y = 6.95, label = "The Good, the Bad and the Ugly (1966)"),
+  geom_text(aes(x = 1, y = 7.1, label = "Il buono, il brutto, il gattivo (1966)"),
             family = "rye",
             size = 16,
             vjust = 5,
@@ -77,7 +78,7 @@ df %>%
   coord_flip(xlim = c(1.2, NA),
              ylim = c(NA, 10)) +
   labs(
-    title = "Good, Bad Or Ugly?",
+    title = "The whole is better than the parts",
     subtitle = "Ratings of movies with either good, bad or ugly in the title",
     caption = "Data: IMDB",
     x = NULL,
@@ -113,7 +114,5 @@ ggsave(
 system("open ./2023/27_good-bad.png")
 
 
-
-
-# fs::file_delete("./2023/data/title.ratings.tsv.gz")
-# fs::file_delete("./2023/data/title.basics.tsv.gz")
+fs::file_delete("./2023/data/title.ratings.tsv.gz")
+fs::file_delete("./2023/data/title.basics.tsv.gz")
