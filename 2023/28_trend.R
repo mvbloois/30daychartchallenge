@@ -13,6 +13,9 @@ font_add("title", "./resources/BrunoAceSC-Regular.ttf")
 font_add_google("Lato", "font")
 showtext_auto()
 
+download.file("https://www.eurocontrol.int/performance/data/download/xls/Airport_Traffic.xlsx",
+              "./2023/data/Airport_Traffic.xlsx")
+
 airports <- read_xlsx("./2023/data/Airport_Traffic.xlsx",
           sheet = "DATA") %>% 
   clean_names()
@@ -88,8 +91,9 @@ ggplot() +
                               colour = pc),
     plot.subtitle = element_text(family = "font",
                               size = 52,
-                              lineheight = 0.3,
-                              colour = pc),
+                              lineheight = 0.7,
+                              colour = pc,
+                              margin = margin(t = 5, b = 10)),
     plot.margin = margin(20,20,20,20)
   )
 
@@ -101,3 +105,4 @@ ggsave("./2023/28_trend.png",
 
 system("open ./2023/28_trend.png")
 
+fs::file_delete("./2023/data/Airport_Traffic.xlsx")
