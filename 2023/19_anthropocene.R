@@ -13,8 +13,6 @@ showtext_auto()
 image <- "./2023/data/nuclear-bomb-svgrepo-com.svg"
 image_txt <- paste(readLines(image), collapse = "\n")
 
-atom <- svgparser::read_svg("./2023/data/atom.svg")
-
 df <-
   read_html("https://www.atomicarchive.com/almanac/test-sites/testing-chronology.html") %>%
   html_element("table") %>%
