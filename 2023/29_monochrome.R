@@ -90,6 +90,14 @@ df %>%
             family = "font",
             size = 15,
             angle = 359) +
+  geom_text(aes(x = 2065, y = 19.4, label = "C.I. 67%"),
+            family = "font",
+            size = 12,
+            angle = 4) +
+  geom_text(aes(x = 2064, y = 18.1, label = "C.I. 95%"),
+            family = "font",
+            size = 12,
+            angle = 359) +
   ylim(c(0,NA)) +
   xlim(c(1980, 2070)) +
   labs(
