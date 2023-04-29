@@ -118,5 +118,13 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
   <tr>
     <td><img src="./2023/27_good-bad.png" width=400 height=300></td>
     <td><img src="./2023/28_trend.png" width=400 height=300></td>
+  </tr>
+    <tr>
+    <td>Day 29 - Monochrome</td>
+    <td>Day 30 - Worldbank/td>
+  </tr>
+  <tr>
+    <td><img src="./2023/29_monochrome.png" width=400 height=300></td>
+    <td><img src="./2023/30_worldbank.png" width=400 height=300></td>
   </tr>  
 </table>
