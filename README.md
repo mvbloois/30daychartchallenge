@@ -121,7 +121,7 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
   </tr>
     <tr>
     <td>Day 29 - Monochrome</td>
-    <td>Day 30 - Worldbank/td>
+    <td>Day 30 - Worldbank</td>
   </tr>
   <tr>
     <td><img src="./2023/29_monochrome.png" width=400 height=300></td>
