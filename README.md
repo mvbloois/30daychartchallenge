@@ -13,7 +13,7 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
   </tr>
   <tr>
     <td><img src="./2024/R/01_part-to-whole.png" width=400 height=300></td>
-    <td><img src="./2023/R/01_part-to-whole.png" width=400 height=300></td>
+    <td><img src="./2024/R/02_neo.png" width=400 height=300></td>
   </tr>
     <tr>
     <td>Day 3 - Fauna/flora</td>
