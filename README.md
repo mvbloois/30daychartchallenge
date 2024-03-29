@@ -9,14 +9,14 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
 <table>
   <tr>
     <td>Day 1 - Part to whole</td>
-    <td>Day 2 - Waffle</td>
+    <td>Day 2 - Neo</td>
   </tr>
   <tr>
     <td><img src="./2024/R/01_part-to-whole.png" width=400 height=300></td>
     <td><img src="./2024/R/02_neo.png" width=400 height=300></td>
   </tr>
     <tr>
-    <td>Day 3 - Fauna/flora</td>
-    <td>Day 4 - Historical</td>
+    <td>Day 3 - Makeover</td>
+    <td>Day 4 - Waffle</td>
   </tr>
 </table>
