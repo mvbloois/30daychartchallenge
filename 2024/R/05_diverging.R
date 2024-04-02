@@ -78,10 +78,10 @@ plot_data |>
   )
  
 ggsave(
-  "./2024/R/04_diverging.png",
+  "./2024/R/05_diverging.png",
   bg = "white",
   width = 8,
   height = 6,
 )
-system("open ./2024/R/04_diverging.png")
+system("open ./2024/R/05_diverging.png")
 
