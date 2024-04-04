@@ -19,4 +19,8 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td>Day 3 - Makeover</td>
     <td>Day 4 - Waffle</td>
   </tr>
+  <tr>
+    <td><img src="./2024/R/03_makeover.png" width=400 height=300></td>
+    <td><img src="./2024/R/04_waffle.png" width=400 height=300></td>
+  </tr>
 </table>
