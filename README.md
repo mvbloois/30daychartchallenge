@@ -23,4 +23,12 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/03_makeover.png" width=400 height=300></td>
     <td><img src="./2024/R/04_waffle.png" width=400 height=300></td>
   </tr>
+  <tr>
+    <td>Day 5 - Diverging</td>
+    <td>Day 6 - Data day: OECD</td>
+  </tr>
+  <tr>
+    <td><img src="./2024/R/05_diverging.png" width=400 height=300></td>
+    <td><img src="./2024/R/06_oecd.png" width=400 height=300></td>
+  </tr>
 </table>
