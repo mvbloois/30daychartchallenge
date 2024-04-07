@@ -24,9 +24,9 @@ plot_data |>
   scale_fill_gradientn(colours = wes_palette("Zissou1", 100, type = "continuous")) +
   
   coord_fixed() +
-  labs(x = NULL, y = NULL,
+  labs(x = NULL, y = "magnitude",
        title = "Earthquakes in Groningen",
-       subtitle = str_wrap("Since the 1960s, the Netherlands has been extracting natural gas from the subsurface of North Netherlands. Gas extraction is responsible for nearly all earthquakes in the northern part of the country. The first earthquake occurred near Assen on December 26, 1986. The gas is extracted from a layer of sandstone at a depth of 3 kilometers. Due to gas extraction, the sandstone layer compacts. Along faults in this layer, a difference in stress builds up, eventually resulting in a sudden shift: an earthquake.", 80),
+       subtitle = str_wrap("Since the 1960s, the Netherlands has been extracting natural gas from the subsurface of North Netherlands. Gas extraction is responsible for nearly all earthquakes in the northern part of the country. The first earthquake occurred near Assen on December 26, 1986. The gas is extracted from a layer of sandstone at a depth of 3 kilometers. Due to gas extraction, the sandstone layer compacts. Along faults in this layer, a difference in stress builds up, eventually resulting in a sudden shift: an earthquake.", 100),
        caption = "Data: KNMI",
        fill = "# of earthquakes:") +
   theme_minimal() +
@@ -40,8 +40,8 @@ plot_data |>
                               hjust = 0),
     plot.title.position = "plot",
     plot.title = element_text(size = 62),
-    plot.subtitle = element_text(size = 42,
-                                 lineheight = 0.4),
+    plot.subtitle = element_text(size = 34,
+                                 lineheight = 0.3),
     plot.caption = element_text(size = 26),
     plot.margin = margin(10, 10, 10, 10)
   )
@@ -50,7 +50,7 @@ ggsave(
   "./2024/R/07_hazards.png",
   bg = "white",
   width = 8,
-  height = 6,
+  height = 5,
 )
 system("open ./2024/R/07_hazards.png")
 
