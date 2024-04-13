@@ -54,10 +54,10 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     </tr>
     <tr>
     <td>Day 11 - Mobile friendly</td>
-    <td>Day 12 - Theme: Reuters Graphics</td>
+    <td>Day 12 - Theme day: Reuters Graphics</td>
   </tr>
   <tr>
     <td><img src="./2024/R/11_mobile-friendly.png" width=400 height=300></td>
-    <td><img src="./2024/R/12_reuters-graphics" width=400 height=300></td>
+    <td><img src="./2024/R/12_reuters-graphics.png" width=400 height=300></td>
   </tr>
 </table>
