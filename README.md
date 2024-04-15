@@ -60,4 +60,17 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/11_mobile-friendly.png" width=400 height=300></td>
     <td><img src="./2024/R/12_reuters-graphics.png" width=400 height=300></td>
   </tr>
+    <tr>
+    <td><img src="./2024/R/09_major-minor.png" width=400 height=300></td>
+    <td><img src="./2024/R/10_physical.png" width=400 height=300></td>
+  </tr>
+    </tr>
+    <tr>
+    <td>Day 13 - Family</td>
+    <td>Day 14 - Heatmap</td>
+  </tr>
+  <tr>
+    <td><img src="./2024/R/13_family.png" width=400 height=300></td>
+    <td><img src="./2024/R/14_heatmap.png" width=400 height=300></td>
+  </tr>
 </table>
