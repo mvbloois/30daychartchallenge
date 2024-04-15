@@ -40,10 +40,6 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/08_circular.png" width=400 height=300></td>
   </tr>
   <tr>
-    <td><img src="./2024/R/05_diverging.png" width=400 height=300></td>
-    <td><img src="./2024/R/06_oecd.png" width=400 height=300></td>
-  </tr>
-  <tr>
     <td>Day 9 - Major/Minor</td>
     <td>Day 10 - Physical</td>
   </tr>
