@@ -15,7 +15,7 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/01_part-to-whole.png" width=400 height=300></td>
     <td><img src="./2024/R/02_neo.png" width=400 height=300></td>
   </tr>
-    <tr>
+  <tr>
     <td>Day 3 - Makeover</td>
     <td>Day 4 - Waffle</td>
   </tr>
@@ -31,7 +31,7 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/05_diverging.png" width=400 height=300></td>
     <td><img src="./2024/R/06_oecd.png" width=400 height=300></td>
   </tr>
-    <tr>
+  <tr>
     <td>Day 7 - Hazards</td>
     <td>Day 8 - Circular</td>
   </tr>
@@ -39,11 +39,7 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/07_hazards.png" width=400 height=300></td>
     <td><img src="./2024/R/08_circular.png" width=400 height=300></td>
   </tr>
-    <tr>
-    <td><img src="./2024/R/05_diverging.png" width=400 height=300></td>
-    <td><img src="./2024/R/06_oecd.png" width=400 height=300></td>
-  </tr>
-    <tr>
+  <tr>
     <td>Day 9 - Major/Minor</td>
     <td>Day 10 - Physical</td>
   </tr>
@@ -51,13 +47,20 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/09_major-minor.png" width=400 height=300></td>
     <td><img src="./2024/R/10_physical.png" width=400 height=300></td>
   </tr>
-    </tr>
-    <tr>
+  <tr>
     <td>Day 11 - Mobile friendly</td>
     <td>Day 12 - Theme day: Reuters Graphics</td>
   </tr>
   <tr>
     <td><img src="./2024/R/11_mobile-friendly.png" width=400 height=300></td>
     <td><img src="./2024/R/12_reuters-graphics.png" width=400 height=300></td>
+  </tr>
+  <tr>
+    <td>Day 13 - Family</td>
+    <td>Day 14 - Heatmap</td>
+  </tr>
+  <tr>
+    <td><img src="./2024/R/13_family.png" width=400 height=300></td>
+    <td><img src="./2024/R/14_heatmap.png" width=400 height=300></td>
   </tr>
 </table>
