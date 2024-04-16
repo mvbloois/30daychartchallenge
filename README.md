@@ -69,6 +69,6 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
   </tr>
   <tr>
     <td><img src="./2024/R/15_historical.png" width=400 height=300></td>
-    <td><img src="./2024/R/14_weather.png" width=400 height=300></td>
+    <td><img src="./2024/R/16_weather.png" width=400 height=300></td>
   </tr>
 </table>
