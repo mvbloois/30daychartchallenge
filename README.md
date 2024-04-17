@@ -63,4 +63,12 @@ The [#30DayChartChallenge](https://30daychartchallenge.org/) is a community-driv
     <td><img src="./2024/R/13_family.png" width=400 height=300></td>
     <td><img src="./2024/R/14_heatmap.png" width=400 height=300></td>
   </tr>
+    <tr>
+    <td>Day 15 - Historical</td>
+    <td>Day 16 - Weather</td>
+  </tr>
+  <tr>
+    <td><img src="./2024/R/15_historical.png" width=400 height=300></td>
+    <td><img src="./2024/R/16_weather.png" width=400 height=300></td>
+  </tr>
 </table>
