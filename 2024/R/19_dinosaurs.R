@@ -13,7 +13,7 @@ time <- cols[5]
 
 plot_data <- tibble(
   place = c(2,1),
-  item = c("Age of dinoaurs", " Age of man"),
+  item = c("Age of dinosaurs", " Age of man"),
   start = c(-240, -0.3),
   end = c(-66, 0)
 ) 
